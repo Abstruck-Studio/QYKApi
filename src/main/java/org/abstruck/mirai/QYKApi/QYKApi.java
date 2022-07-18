@@ -45,4 +45,8 @@ public final class QYKApi extends JavaPlugin {
         CommandManager.INSTANCE.registerCommand(new Talk(),true);
         getLogger().info("Plugin loaded!");
     }
+
+    public Lazy<Permission> getQYKApiPermission() {
+        return QYKApiPermission;
+    }
 }
