@@ -14,8 +14,8 @@ public class QingYunKeApi {
         String json = HttpUtil.doGet(QINGYUNKE_API,param);
         System.out.println(json);
         QYKData data = new Gson().fromJson(json,QYKData.class);
-        if (data.result!=0) return "API出错";
-        return data.content;
+        if (data.result!=0) return "出错了！";
+        return data.content.replace("{br}","\n");
     }
 
     static class QYKData {
