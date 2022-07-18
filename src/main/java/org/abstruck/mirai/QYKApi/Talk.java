@@ -12,7 +12,7 @@ public class Talk extends JRawCommand {
         setDescription("talk to your robot");
         setPrefixOptional(true);
         setUsage("/talk");
-        setPermission(QYKApi.INSTANCE.getParentPermission());
+        setPermission(QYKApi.INSTANCE.getQYKApiPermission().getValue());
     }
 
     @Override
